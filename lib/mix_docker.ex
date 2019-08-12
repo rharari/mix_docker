@@ -150,6 +150,7 @@ defmodule MixDocker do
   end
 
   defp system!(cmd, args) do
+    Logger.debug "$ #{cmd} #{args |> Enum.join(" ")}"
     {_, 0} = system(cmd, args)
   end
 end
