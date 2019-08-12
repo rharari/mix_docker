@@ -18,8 +18,11 @@ ENV PATH=./node_modules/.bin:$PATH \
     HOME=/opt/app
 
 # Install Hex+Rebar
-RUN mix local.hex --force && \
-    mix local.rebar --force
+# RUN mix local.hex --force && \
+#    mix local.rebar --force
+
+RUN mix local.hex --force
+RUN mix local.rebar --force
 
 WORKDIR /opt/app
 
